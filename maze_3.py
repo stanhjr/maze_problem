@@ -1,7 +1,8 @@
 def search_path_maze(maze: list, start: tuple, end: tuple) -> list:
-    """search exit from the maze
-       index [0] - minimum number of moves to the exit
-       index [1] - route to the exit"""
+    """:search exit from the maze
+       :return: return data description
+       :rtype: tuple
+    """
 
     def search_for_edges(x: int, y: int) -> list:
         """return list of indices of neighbors equal to zero"""
@@ -72,8 +73,8 @@ maze = [
 start = (0, 0)
 stop = (2, 2)
 
-an, route = search_path_maze(maze, start, stop)
+answer, route = search_path_maze(maze, start, stop)
 print(search_path_maze(maze, start, stop))
 
-print(an)
+print(answer)
 print(route)
